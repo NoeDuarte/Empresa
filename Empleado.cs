@@ -42,10 +42,35 @@ namespace Empresa
             this.supervisor = nuevoSupervisor;
         }
 
-        public void IncrementarSalario()
+        public int anioNacimiento()
         {
-            this.salario *= 1.1;
+            int anioNacimiento;
+
+
+            return anioNacimiento = DateTime.Now.Year - this.edad;
+
+
         }
+
+
+        public double IncrementarSalario()
+        {
+            double incremento = 0.1 + (this.antiguedad * 0.01);
+
+            if (anioNacimiento() < 1964)
+            {
+                incremento = +0.05;
+            }
+
+            return this.salario *= (1.1 + incremento);
+
+
+        }
+
+        /* public void IncrementarSalario()
+         {
+             this.salario *= 1.1;
+         }*/
     }
 }
 

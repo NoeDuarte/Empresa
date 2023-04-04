@@ -15,7 +15,7 @@ class Principal
 
         // Incrementar salario de todos los empleados
         empleado1.IncrementarSalario();
-        //empleado2.IncrementarSalario();
+        Console.WriteLine  ( empleado2.IncrementarSalario());
        // supervisor1.IncrementarSalario();
         empleado2.Presentarse();
     }
